@@ -1,3 +1,4 @@
 # lab.01b
 
-Os meus exercícios estão todos no branch Master.
+Nome: Rafael Joo Seong Yun
+TIA: 32144636
