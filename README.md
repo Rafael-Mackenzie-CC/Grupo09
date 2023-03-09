@@ -1,4 +1,6 @@
 # Grupo09
+Heitor Jody 42111013 / Rafael Yun 32144636
+
 
 Exercício 1
 As chamadas de sistema ao SO nesse programa são feitas pelas funções da biblioteca padrão do C, como fopen, fgetc e fclose.
