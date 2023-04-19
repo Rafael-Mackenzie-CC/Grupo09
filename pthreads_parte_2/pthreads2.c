@@ -37,23 +37,21 @@ int main(int argc, char **argv) {
   }
   gPi *= 2.0;
   printf("Quantidade de threads: %d\n", NUMTHREADS);
-  printf("Valor aproximado de pi computado:%12.9f\n", gPi);
+  printf("Valor aproximado de pi (com thread):%12.9f\n", gPi);
   pthread_mutex_destroy(&gLock);
 
+  int j;
+  double pi;
+  double factor = 1.0;
+  double sum = 0.0;
 
-    int i;
-    double pi;
-    double factor = 1.0;
-    double sum = 0.0;
+  for (j = 0; j <= 10000000; j++, factor = -factor) {
+    sum += factor / (2 * j + 1);
+  }
 
-    for (i = 0; i <= 100; i++, factor = -factor) {
-        sum += factor/(2*i+1);
-    }
+  pi = 4.0 * sum;
 
-    pi = 4.0*sum;
-
-    printf("Valor aproximado de pi: %f\n", pi);
-
+  printf("Valor aproximado de pi (sem thread):%12.9f\n", pi);
 
   return 0;
 }
